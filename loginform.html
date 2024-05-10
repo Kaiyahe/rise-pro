@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="loginform.css">
+    <title></title>
+    <script>
+            
+        function checkforblank()
+        {
+        var fnamelname=document.getElementById("fnamelname");
+        var username=document.getElementById("uname");
+        var phonenumber=document.getElementById("pnumber");
+        var email=document.getElementById("email");
+        var password=document.getElementById("pass");
+//trim check for spaces and keep them blank
+        if(fnamelname.value.trim()==""|| username.value.trim()=="" || phonenumber.value.trim()=="" || email.value.trim()=="" || password.value.trim()=="")
+        {
+            alert("Please fill all the fields!!");
+            return false;
+        }
+        else{
+            alert ("login succcessful");
+           return true;
+        }
+            }
+        
+    </script>
+</head>
+<body>
+    <body background="kai/Capital-M-1-bed-kitchen_living-room-1024x683 (1).webp">
+    <b><h1>Welcome to our real estate services</h1></b>
+    <b><p>Register and start geting our service</p></b>
+    <form action="Rise of developers.html" method="post" onsubmit=" return checkforblank()">
+        <fieldset>
+    firstname & lastname<br><input type="text" Id="fnamelname" placeholder="Enter your full names"><br><br>
+    Username<br><input type="text" Id="uname" placeholder="Enter your username"><br><br>
+    Phone number<br><input type="number" Id="pnumber" placeholder="Enter your phone number" maxlength="10"><br><br>
+    Email<br><input type="email" Id="email" placeholder="Enter your Email"><br><br>
+    Password<br><input type="password"  Id="pass" placeholder="Enter your password"><br><br>
+<input type="submit" value="Login">    <input type="submit" value="sign up" onclick="check()">
+</fieldset >
+</form>
+<script>
+    function check(){
+            var Email=document.getElementById("email").value;
+        var password=document.getElementById("pass").value;
+        if(email=="riseofdeveloper@gmail.com" && password=="Rise123"){
+            window.location.assign("Rise of developers.html");
+            alert("login succesful");
+            return true;
+        }
+        else{
+            alert("wrong Details");
+            return false;
+        }
+    }
+</script>
+</body>
+</html>
